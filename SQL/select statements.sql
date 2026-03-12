@@ -86,6 +86,26 @@ SELECT *
 FROM parks_and_recreation.employee_demographics
 order by gender,age DESC;
 
+SELECT gender, AVG(age)
+FROM parks_and_recreation.employee_demographics
+group by gender
+HAVING AVG(age)>40;
+
+SELECT *
+FROM parks_and_recreation.employee_demographics
+order by age asc
+LIMIT 2,1;
+
+SELECT gender, AVG(age) as avg_age
+FROM parks_and_recreation.employee_demographics
+GROUP BY gender
+HAVING avg_age>40
+
+
+
+
+
+
 
 
 
